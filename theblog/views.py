@@ -7,7 +7,7 @@ from django.urls import reverse_lazy
 class HomeView(ListView):
     model = Post
     template_name = 'home.html'
-    #ordering = ['-id']
+    ordering = ['-id']
     #'id' del post
 
 class ArticleDetailView(DetailView):
@@ -18,7 +18,7 @@ class AddPostView(CreateView):
     model = Post
     form_class = PostForm
     template_name = 'add_post.html'
-    #fields = '__all__'
+    
     #fields = ('title', 'body')
 
 class UpdatePostView(UpdateView):
